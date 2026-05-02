@@ -27,7 +27,7 @@ export const About = () => {
   const certifications = [
     { title:"Uhack 4.0 Hackathon", issuer:"United Group Of Institutions", icon:<FaTrophy size={18} className="text-gold"/>, year:"2026", link:"./uhack_4.jpg" },
     { title:"Generative AI with NLP", issuer:"United Global Infoservice Pvt. Ltd.", icon:<SiGoogle size={18} className="text-accent"/>, year:"2025", link:"./gen_ai_cert.jpg" },
-    { title:"Gen AI Study Jam", issuer:"Google Developer Groups - UIT", icon:<SiGoogle size={18} className="text-[#4285F4]"/>, year:"2024", link:"./gen_ai_study_jam.jpg" },
+    { title:"Gen AI Study Jam", issuer:"Google Developer Groups - UIT", icon:<SiGoogle size={18} className="text-[#4285F4]"/>, year:"2024", link:"./Abdul.jpg" },
     { title:"Oracle eCertificate", issuer:"Oracle", icon:<GrOracle size={18} className="text-red-500"/>, year:"2025", link:"./oracle_cert.pdf" },
   ];
 
