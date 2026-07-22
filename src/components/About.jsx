@@ -29,12 +29,23 @@ import {
   SiCplusplus,
   SiApachecouchdb,
   SiRender,
-  SiRailway
+  SiRailway,
+  SiNextdotjs,
+  SiVite,
+  SiRedux,
+  SiFramer,
+  SiBootstrap,
+  SiPostgresql,
+  SiRedis,
+  SiFirebase,
+  SiDjango,
+  SiGraphql,
+  SiSpringboot
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { GrOracle } from "react-icons/gr";
 import { FaJava, FaDownload, FaAward, FaTrophy, FaCss3Alt } from "react-icons/fa";
-import { BrainCircuit, GraduationCap, Cloud, Server, Database, Layout, Cpu, Wrench } from "lucide-react";
+import { BrainCircuit, GraduationCap, Cloud, Server, Database, Layout, Cpu, Wrench, Sparkles, Wand2, Palette, Layers } from "lucide-react";
 
 export const About = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -66,7 +77,12 @@ export const About = () => {
       icon: <Layout size={18} className="text-accent" />,
       skills: [
         { icon: <SiReact size={24} className="text-cyan-400" />, name: "React JS" },
-        { icon: <SiTailwindcss size={24} className="text-teal-400" />, name: "Tailwind CSS" }
+        { icon: <SiNextdotjs size={24} className="text-white" />, name: "Next.js" },
+        { icon: <SiVite size={24} className="text-purple-400" />, name: "Vite" },
+        { icon: <SiTailwindcss size={24} className="text-teal-400" />, name: "Tailwind CSS" },
+        { icon: <SiRedux size={24} className="text-purple-500" />, name: "Redux" },
+        { icon: <SiFramer size={24} className="text-pink-500" />, name: "Framer Motion" },
+        { icon: <SiBootstrap size={24} className="text-indigo-400" />, name: "Bootstrap" }
       ]
     },
     {
@@ -75,37 +91,47 @@ export const About = () => {
       skills: [
         { icon: <SiNodedotjs size={24} className="text-green-500" />, name: "Node.js" },
         { icon: <SiExpress size={24} className="text-text" />, name: "Express.js" },
+        { icon: <SiDjango size={24} className="text-emerald-600" />, name: "Django" },
         { icon: <SiFlask size={24} className="text-text2" />, name: "Flask" },
-        { icon: <SiFastapi size={24} className="text-teal-300" />, name: "FastAPI" }
+        { icon: <SiFastapi size={24} className="text-teal-300" />, name: "FastAPI" },
+        { icon: <SiSpringboot size={24} className="text-green-400" />, name: "Spring Boot" },
+        { icon: <SiGraphql size={24} className="text-pink-400" />, name: "GraphQL" }
       ]
     },
     {
       title: "DATABASES",
       icon: <Database size={18} className="text-pink-400" />,
       skills: [
+        { icon: <SiPostgresql size={24} className="text-blue-400" />, name: "PostgreSQL" },
         { icon: <SiMongodb size={24} className="text-green-500" />, name: "MongoDB" },
-        { icon: <SiMysql size={24} className="text-blue-400" />, name: "MySQL" },
+        { icon: <SiMysql size={24} className="text-blue-500" />, name: "MySQL" },
+        { icon: <SiRedis size={24} className="text-red-500" />, name: "Redis" },
+        { icon: <SiFirebase size={24} className="text-amber-500" />, name: "Firebase Realtime DB" },
         { icon: <SiApachecouchdb size={24} className="text-red-400" />, name: "IBM Cloudant (NoSQL)" }
       ]
     },
     {
-      title: "AI & ML",
+      title: "AI & ML TOOLS",
       icon: <Cpu size={18} className="text-purple-400" />,
       skills: [
         { icon: <SiTensorflow size={24} className="text-orange-400" />, name: "TensorFlow" },
         { icon: <SiPytorch size={24} className="text-red-500" />, name: "PyTorch" },
         { icon: <SiOpencv size={24} className="text-green-400" />, name: "OpenCV" },
         { icon: <SiScikitlearn size={24} className="text-amber-500" />, name: "Scikit-Learn" },
-        { icon: <SiOpenai size={24} className="text-emerald-300" />, name: "OpenAI API" },
+        { icon: <SiOpenai size={24} className="text-emerald-300" />, name: "OpenAI API / ChatGPT" },
         { icon: <SiHuggingface size={24} className="text-yellow-400" />, name: "HuggingFace" }
       ]
     },
     {
-      title: "DESIGNING",
+      title: "DESIGNING & AI UI",
       icon: <SiFigma size={18} className="text-purple-400" />,
       skills: [
+        { icon: <Wand2 size={24} className="text-indigo-400" />, name: "Stitch AI (Google)" },
         { icon: <SiFigma size={24} className="text-purple-400" />, name: "Figma" },
-        { icon: <SiCanva size={24} className="text-cyan-400" />, name: "Canva" }
+        { icon: <SiCanva size={24} className="text-cyan-400" />, name: "Canva" },
+        { icon: <Palette size={24} className="text-pink-400" />, name: "UI Prototyping" },
+        { icon: <Layers size={24} className="text-blue-400" />, name: "Design Systems" },
+        { icon: <Sparkles size={24} className="text-gold" />, name: "AI UI Generators" }
       ]
     },
     {
