@@ -30,22 +30,24 @@ import {
   SiApachecouchdb,
   SiRender,
   SiRailway,
-  SiNextdotjs,
   SiVite,
   SiRedux,
   SiFramer,
-  SiBootstrap,
   SiPostgresql,
   SiRedis,
   SiFirebase,
   SiDjango,
   SiGraphql,
-  SiSpringboot
+  SiSpringboot,
+  SiNginx,
+  SiGithubactions,
+  SiJest,
+  SiAxios
 } from "react-icons/si";
 import { VscVscode } from "react-icons/vsc";
 import { GrOracle } from "react-icons/gr";
 import { FaJava, FaDownload, FaAward, FaTrophy, FaCss3Alt } from "react-icons/fa";
-import { BrainCircuit, GraduationCap, Cloud, Server, Database, Layout, Cpu, Wrench, Sparkles, Wand2, Palette, Layers } from "lucide-react";
+import { BrainCircuit, GraduationCap, Cloud, Server, Database, Layout, Cpu, Wrench, Sparkles, Wand2, Palette, Layers, Binary, ShieldCheck } from "lucide-react";
 
 export const About = () => {
   const [roleIndex, setRoleIndex] = useState(0);
@@ -77,12 +79,11 @@ export const About = () => {
       icon: <Layout size={18} className="text-accent" />,
       skills: [
         { icon: <SiReact size={24} className="text-cyan-400" />, name: "React JS" },
-        { icon: <SiNextdotjs size={24} className="text-white" />, name: "Next.js" },
         { icon: <SiVite size={24} className="text-purple-400" />, name: "Vite" },
         { icon: <SiTailwindcss size={24} className="text-teal-400" />, name: "Tailwind CSS" },
-        { icon: <SiRedux size={24} className="text-purple-500" />, name: "Redux" },
+        { icon: <SiRedux size={24} className="text-purple-500" />, name: "Redux Toolkit" },
         { icon: <SiFramer size={24} className="text-pink-500" />, name: "Framer Motion" },
-        { icon: <SiBootstrap size={24} className="text-indigo-400" />, name: "Bootstrap" }
+        { icon: <SiAxios size={24} className="text-indigo-400" />, name: "Axios (HTTP)" }
       ]
     },
     {
@@ -111,15 +112,16 @@ export const About = () => {
       ]
     },
     {
-      title: "AI & ML TOOLS",
+      title: "AI & VECTOR SEARCH",
       icon: <Cpu size={18} className="text-purple-400" />,
       skills: [
+        { icon: <Binary size={24} className="text-cyan-300" />, name: "FAISS (Vector Search)" },
         { icon: <SiTensorflow size={24} className="text-orange-400" />, name: "TensorFlow" },
         { icon: <SiPytorch size={24} className="text-red-500" />, name: "PyTorch" },
         { icon: <SiOpencv size={24} className="text-green-400" />, name: "OpenCV" },
         { icon: <SiScikitlearn size={24} className="text-amber-500" />, name: "Scikit-Learn" },
-        { icon: <SiOpenai size={24} className="text-emerald-300" />, name: "OpenAI API / ChatGPT" },
-        { icon: <SiHuggingface size={24} className="text-yellow-400" />, name: "HuggingFace" }
+        { icon: <SiOpenai size={24} className="text-emerald-300" />, name: "OpenAI API / LLMs" },
+        { icon: <SiHuggingface size={24} className="text-yellow-400" />, name: "HuggingFace Spaces" }
       ]
     },
     {
@@ -130,29 +132,31 @@ export const About = () => {
         { icon: <SiFigma size={24} className="text-purple-400" />, name: "Figma" },
         { icon: <SiCanva size={24} className="text-cyan-400" />, name: "Canva" },
         { icon: <Palette size={24} className="text-pink-400" />, name: "UI Prototyping" },
-        { icon: <Layers size={24} className="text-blue-400" />, name: "Design Systems" },
-        { icon: <Sparkles size={24} className="text-gold" />, name: "AI UI Generators" }
+        { icon: <Layers size={24} className="text-blue-400" />, name: "Design Systems" }
       ]
     },
     {
-      title: "DEPLOYMENT",
+      title: "CLOUD & DEVOPS",
       icon: <Cloud size={18} className="text-sky-400" />,
       skills: [
+        { icon: <SiDocker size={24} className="text-blue-400" />, name: "Docker" },
+        { icon: <SiNginx size={24} className="text-green-500" />, name: "Nginx" },
+        { icon: <SiGithubactions size={24} className="text-blue-400" />, name: "GitHub Actions CI/CD" },
         { icon: <SiVercel size={24} className="text-text" />, name: "Vercel" },
         { icon: <SiRender size={24} className="text-cyan-300" />, name: "Render" },
         { icon: <SiRailway size={24} className="text-purple-300" />, name: "Railway" },
         { icon: <SiNetlify size={24} className="text-teal-400" />, name: "Netlify" },
-        { icon: <SiDocker size={24} className="text-blue-400" />, name: "Docker" },
         { icon: <Cloud size={24} className="text-sky-400" />, name: "IBM Cloud" }
       ]
     },
     {
-      title: "DEV TOOLS",
+      title: "DEV & TESTING",
       icon: <Wrench size={18} className="text-gold" />,
       skills: [
         { icon: <SiGit size={24} className="text-orange-500" />, name: "Git" },
         { icon: <SiGithub size={24} className="text-text" />, name: "GitHub" },
         { icon: <SiPostman size={24} className="text-orange-400" />, name: "Postman" },
+        { icon: <SiJest size={24} className="text-red-400" />, name: "Jest (Testing)" },
         { icon: <VscVscode size={24} className="text-blue-500" />, name: "VS Code" }
       ]
     }
@@ -398,7 +402,7 @@ export const About = () => {
             </h3>
           </div>
 
-          {/* Grid of Tech Stack Categories matching user request */}
+          {/* Grid of Tech Stack Categories */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {skillCategories.map((cat, idx) => (
               <motion.div
