@@ -4,7 +4,7 @@ import { TiltCard } from "./UIElements";
 
 export const Education = () => {
   const educationData = [
-    { year:"2023 — 2027", degree:"B.Tech — Computer Science", school:"United Institute of Technology", location:"Prayagraj, India", progress:"w-[75%]", icon:<GraduationCap size={22}/>, tags:["AI & ML Specialization"] },
+    { year:"2023 — 2027", degree:"B.Tech — Computer Science & Engineering", school:"United Institute of Technology", location:"Prayagraj, India", progress:"w-[75%]", icon:<GraduationCap size={22}/>, tags:["AI & ML Specialization", "CGPA: 7.84"] },
     { year:"2023", degree:"Senior Secondary", school:"Allahabad Public School & College", location:"Prayagraj, India", progress:"w-[100%]", icon:<School size={20}/>, tags:["PCM","Computer Science"] },
     { year:"2021", degree:"Secondary", school:"Allahabad Public School & College", location:"Prayagraj, India", progress:"w-[100%]", icon:<Award size={20}/>, tags:["Science","Mathematics"] },
   ];
