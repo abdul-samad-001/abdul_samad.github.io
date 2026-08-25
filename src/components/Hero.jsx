@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Mail, FolderOpen, MapPin, Code2, Sparkles, Palette } from "lucide-react";
 import { TiltCard } from "./UIElements";
+import profileImg from "../assets/profile.jpg";
 
 const roles = [
   "Software Engineer",
@@ -44,12 +45,12 @@ export const Hero = () => {
   }, [currentText, isDeleting, currentRoleIndex]);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-8 z-10 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center pt-32 pb-20 px-6 sm:px-8 z-10 overflow-hidden">
       {/* Ambient light effects */}
       <div className="absolute top-20 left-1/4 w-[500px] h-[500px] bg-primary/8 rounded-full blur-[120px] pointer-events-none animate-glow-pulse"></div>
       <div className="absolute bottom-20 right-1/4 w-[400px] h-[400px] bg-accent/6 rounded-full blur-[100px] pointer-events-none animate-glow-pulse" style={{ animationDelay: '-1.5s' }}></div>
 
-      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl w-full mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
         {/* Left Side */}
         <motion.div
           initial={{ opacity: 0, x: -40 }}
@@ -125,7 +126,7 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1, rotateY: 0 }}
           transition={{ duration: 1.2, delay: 0.5, type: "spring" }}
           style={{ transformPerspective: 1200 }}
-          className="hidden lg:block relative"
+          className="relative w-full max-w-sm sm:max-w-md mx-auto lg:max-w-none mt-8 lg:mt-0"
         >
           {/* Multi-layered Neon Backlight */}
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[130%] h-[130%] pointer-events-none z-0">
@@ -139,9 +140,11 @@ export const Hero = () => {
               {/* Image Container */}
               <div className="w-full h-full rounded-[34px] overflow-hidden bg-dark relative group">
                 <img 
-                  src="./profile.jpg" 
+                  src={profileImg} 
                   alt="Abdul Samad" 
                   className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-1000 ease-out" 
+                  loading="eager"
+                  fetchPriority="high"
                 />
                 
                 {/* Premium overlay vignette */}
@@ -149,21 +152,21 @@ export const Hero = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                 {/* Floating Content over Image */}
-                <div className="absolute inset-x-0 bottom-0 p-8 flex flex-col items-start">
+                <div className="absolute inset-x-0 bottom-0 p-5 sm:p-8 flex flex-col items-start">
                   
-                  <div className="flex items-center gap-2.5 px-4 py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl mb-4">
-                    <Code2 className="text-accent" size={16} />
-                    <span className="font-mono text-[10px] font-bold tracking-[0.2em] text-white/80 uppercase">Developer & Designer</span>
+                  <div className="flex items-center gap-2 px-3.5 py-1.5 sm:px-4 sm:py-2 bg-white/5 backdrop-blur-xl border border-white/10 rounded-xl mb-3 sm:mb-4">
+                    <Code2 className="text-accent" size={15} />
+                    <span className="font-mono text-[9px] sm:text-[10px] font-bold tracking-[0.2em] text-white/80 uppercase">Developer & Designer</span>
                   </div>
 
-                  <h3 className="font-head text-4xl font-extrabold text-white mb-1 leading-tight">Abdul Samad</h3>
-                  <p className="font-body text-xs text-text3 mb-4">B.Tech CSE • AI/ML Specialization</p>
+                  <h3 className="font-head text-2xl sm:text-4xl font-extrabold text-white mb-1 leading-tight">Abdul Samad</h3>
+                  <p className="font-body text-[11px] sm:text-xs text-text3 mb-3 sm:mb-4">B.Tech CSE • AI/ML Specialization</p>
                   
-                  <div className="flex items-center justify-between w-full mt-2 border-t border-white/10 pt-4">
-                    <div className="flex items-center gap-2 font-mono text-[10px] text-text3 uppercase tracking-wider">
-                      <MapPin size={12} className="text-accent" /> Prayagraj, IN
+                  <div className="flex items-center justify-between w-full mt-1 sm:mt-2 border-t border-white/10 pt-3 sm:pt-4">
+                    <div className="flex items-center gap-1.5 font-mono text-[9px] sm:text-[10px] text-text3 uppercase tracking-wider">
+                      <MapPin size={11} className="text-accent" /> Prayagraj, IN
                     </div>
-                    <div className="font-mono text-[9px] text-emerald bg-emerald/8 border border-emerald/15 px-3 py-1.5 rounded-lg tracking-widest flex items-center gap-2">
+                    <div className="font-mono text-[8px] sm:text-[9px] text-emerald bg-emerald/8 border border-emerald/15 px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg tracking-widest flex items-center gap-1.5">
                        <span className="w-1.5 h-1.5 bg-emerald rounded-full animate-pulse shadow-[0_0_8px_#34d399]"></span> OPEN TO WORK
                     </div>
                   </div>
@@ -176,19 +179,19 @@ export const Hero = () => {
             <motion.div 
               animate={{ y: [0, -6, 0] }}
               transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="absolute -left-10 top-20 glass-card p-4 w-28 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)]"
+              className="absolute -left-2 sm:-left-8 lg:-left-10 top-16 sm:top-20 glass-card p-2.5 sm:p-4 w-20 sm:w-28 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] z-20"
             >
-               <span className="block text-center font-head text-lg font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-primary">Full Stack</span>
-               <span className="block text-center font-mono text-[8px] uppercase tracking-widest text-text3 mt-1">Developer</span>
+               <span className="block text-center font-head text-sm sm:text-lg font-black text-transparent bg-clip-text bg-gradient-to-br from-white to-primary">Full Stack</span>
+               <span className="block text-center font-mono text-[6.5px] sm:text-[8px] uppercase tracking-widest text-text3 mt-0.5 sm:mt-1">Developer</span>
             </motion.div>
 
             <motion.div 
               animate={{ y: [0, 6, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-              className="absolute -right-10 bottom-32 glass-card px-5 py-3.5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex items-center gap-3"
+              className="absolute -right-2 sm:-right-8 lg:-right-10 bottom-24 sm:bottom-32 glass-card px-3 sm:px-5 py-2 sm:py-3.5 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.5)] flex items-center gap-1.5 sm:gap-3 z-20"
             >
-               <Palette size={16} className="text-accent2" />
-               <span className="font-mono text-[10px] font-bold text-text2 uppercase tracking-wider">UI/UX</span>
+               <Palette size={14} className="text-accent2" />
+               <span className="font-mono text-[8px] sm:text-[10px] font-bold text-text2 uppercase tracking-wider">UI/UX</span>
             </motion.div>
 
           </TiltCard>

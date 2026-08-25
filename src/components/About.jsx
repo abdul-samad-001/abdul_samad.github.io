@@ -163,13 +163,13 @@ export const About = () => {
   ];
 
   const certifications = [
-    { title: "OCI 2025 Certified Generative AI Professional", issuer: "Oracle", icon: <GrOracle size={18} className="text-red-500" />, year: "2025", link: "./oracle_cert.pdf" },
+    { title: "OCI 2025 Certified Generative AI Professional", issuer: "Oracle", icon: <GrOracle size={18} className="text-red-500" />, year: "2025", link: `${import.meta.env.BASE_URL}oracle_cert.pdf` },
     { title: "AWS Solutions Architecture Simulation", issuer: "AWS", icon: <FaTrophy size={18} className="text-amber-400" />, year: "2025", link: "#" },
     { title: "Google Cloud Skills Boost - GCP", issuer: "Google", icon: <SiGoogle size={18} className="text-[#4285F4]" />, year: "2024", link: "#" },
-    { title: "Generative AI using NLP", issuer: "United Global Infoservice", icon: <SiGoogle size={18} className="text-accent" />, year: "2025", link: "./gen_ai_cert.jpg" },
+    { title: "Generative AI using NLP", issuer: "United Global Infoservice", icon: <SiGoogle size={18} className="text-accent" />, year: "2025", link: `${import.meta.env.BASE_URL}gen_ai_cert.jpg` },
     { title: "Python with Data Science", issuer: "United Group of Institutions", icon: <SiPython size={18} className="text-yellow-400" />, year: "2024", link: "#" },
     { title: "HackDiwas 3.0 (Top 40 of 200+ teams)", issuer: "Hackathon", icon: <FaTrophy size={18} className="text-gold" />, year: "2026", link: "#" },
-    { title: "UHack 4.0 (Top 65 of 250+ teams)", issuer: "Hackathon", icon: <FaTrophy size={18} className="text-gold" />, year: "2026", link: "./uhack_4.jpg" }
+    { title: "UHack 4.0 (Top 65 of 250+ teams)", issuer: "Hackathon", icon: <FaTrophy size={18} className="text-gold" />, year: "2026", link: `${import.meta.env.BASE_URL}uhack_4.jpg` }
   ];
 
   return (
@@ -329,7 +329,7 @@ export const About = () => {
 
             <div className="mt-8 mb-10">
               <motion.a
-                href="./resume.pdf"
+                href={`${import.meta.env.BASE_URL}resume.pdf`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.02 }}

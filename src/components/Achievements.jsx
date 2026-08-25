@@ -18,7 +18,7 @@ export const Achievements = () => {
     { id:5, title:"Google Cloud Innovator", platform:"Google Cloud", date:"2026", icon:<Code size={28} className="text-accent"/>, color:"from-accent", desc:"Recognized as a Cloud Innovator for leveraging modern cloud infrastructure and demonstrating deep technical proficiency.", tags:["Cloud","Community"] },
     { id:6, title:"Gen AI Academy 2.0 & APAC", platform:"Hack2Skill", date:"2025-2026", icon:<Brain size={28} className="text-primary2"/>, color:"from-primary2", desc:"Successfully graduated from the rigorous Gen AI Academy (India & APAC Editions), mastering generative modeling frameworks.", tags:["AI","Certification"] },
     { id:7, title:"Hack2Skill AI Bootcamp", platform:"Hack2Skill", date:"2025", icon:<Zap size={28} className="text-accent2"/>, color:"from-accent2", desc:"Completed sequential bootcamps solving advanced engineering problems with practical ML applications.", tags:["Bootcamp","ML"] },
-    { id:8, title:"Oracle eCertificate", platform:"Oracle", date:"2024", icon:<GrOracle size={28} className="text-red-500"/>, color:"from-red-500", desc:"Professional certification validating core operational and programming proficiencies on Oracle infrastructure.", link:"./oracle_cert.pdf", tags:["Cloud","Database"] },
+    { id:8, title:"Oracle eCertificate", platform:"Oracle", date:"2024", icon:<GrOracle size={28} className="text-red-500"/>, color:"from-red-500", desc:"Professional certification validating core operational and programming proficiencies on Oracle infrastructure.", link:`${import.meta.env.BASE_URL}oracle_cert.pdf`, tags:["Cloud","Database"] },
   ];
 
   return (
