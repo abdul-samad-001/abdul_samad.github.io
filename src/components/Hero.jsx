@@ -57,29 +57,7 @@ export const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Mobile Profile Avatar Header (visible on mobile / tablet) */}
-          <div className="flex items-center gap-4 mb-6 lg:hidden">
-            <div className="relative w-20 h-20 sm:w-24 sm:h-24 rounded-2xl p-[2px] bg-gradient-to-tr from-primary via-accent to-pink-500 shadow-[0_0_25px_rgba(139,92,246,0.4)] flex-shrink-0">
-              <img 
-                src={profileImg} 
-                alt="Abdul Samad" 
-                className="w-full h-full object-cover rounded-[14px]"
-                loading="eager"
-              />
-              <span className="absolute -bottom-1 -right-1 w-4 h-4 bg-emerald rounded-full border-2 border-dark shadow-[0_0_8px_#34d399] animate-pulse"></span>
-            </div>
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald/10 border border-emerald/20 rounded-full font-mono text-[10px] text-emerald tracking-wider shadow-[0_0_12px_rgba(52,211,153,0.15)]">
-                <span className="w-1.5 h-1.5 bg-emerald rounded-full shadow-[0_0_8px_#34d399] animate-sPulse"></span>
-                Open to Work
-              </div>
-              <p className="font-mono text-[11px] text-text2 font-semibold tracking-wider mt-1.5">Abdul Samad</p>
-              <p className="font-mono text-[9px] text-text3 tracking-widest uppercase">B.Tech CSE • AI/ML</p>
-            </div>
-          </div>
-
-          {/* Desktop Available Badge */}
-          <div className="hidden lg:inline-flex items-center gap-2.5 px-5 py-2 bg-emerald/5 border border-emerald/15 rounded-full font-mono text-[11px] text-emerald mb-8 tracking-wider shadow-[0_0_20px_rgba(52,211,153,0.08)]">
+          <div className="inline-flex items-center gap-2.5 px-5 py-2 bg-emerald/5 border border-emerald/15 rounded-full font-mono text-[11px] text-emerald mb-6 sm:mb-8 tracking-wider shadow-[0_0_20px_rgba(52,211,153,0.08)]">
             <span className="w-2 h-2 bg-emerald rounded-full shadow-[0_0_10px_#34d399] animate-sPulse"></span>
             Available for opportunities
           </div>
